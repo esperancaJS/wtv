@@ -1,12 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import { Provider } from 'react-redux';
 
-// import './style.sass';
+import App from './app';
+import './styles.scss'
+import store from '@state';  
 
-const App = () => (
-    <div>
-        <h1>Hello, World!</h1>
-    </div>
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById("root")
 );
-
-ReactDOM.render(<App />, document.getElementById("root"));

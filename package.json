@@ -1,12 +1,28 @@
 {
   "scripts": {
-    "start": "parcel src/index.html"
+    "//": "NODE_ENV=production",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "alias": {
+    "@env": "./environments",
+    "@state": "./src/state"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0",
+    "loadable-components": "^1.2.0",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react-dom": "^16.3.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "node-sass": "^4.8.3",
     "parcel-bundler": "^1.7.0"
   }
 }
